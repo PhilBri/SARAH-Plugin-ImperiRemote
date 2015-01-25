@@ -7,8 +7,8 @@
 
       <item>Sarah
          <one-of>
-            <item>Affiche Imperi home
-               <tag>out.action.cmd="POWR1"; out.action.ttsAction="Imperi Home est affiché"; </tag>
+            <item>Affiche Imperi Home
+               <tag>out.action.cmd="pageIdx=1"; out.action.ttsAction="Imperi Home est affiché"; </tag>
             </item>
       </item>
       <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/ImperiRemote";</tag>
