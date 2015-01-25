@@ -10,9 +10,9 @@
 
 exports.action = function ( data , callback , config , SARAH ) {
 
-	var	config = cfg.modules.ImperiRemote;
+	var	cfg = config.modules.ImperiRemote;
 
-	if ( !config.IP || !config.Port) {
+	if ( !cfg.IP || !cfg.Port) {
 		console.log ("\nImperiRemote [Erreur] => IP ou Port non paramétré !");
 		return callback ({ 'tts' : 'Erreur de configuration de l\'I P ou du port' });
 	}
@@ -21,7 +21,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 	var options = {
     	host: config.IP,
     	port: config.Port,
-    	path: '/api/rest/dashboard/gotopage?' + data.cmd;
+    	path: '/api/rest/dashboard/gotopage?' + data.cmd
   	};
 
 	var req = http.get ( options, function ( response ) {
