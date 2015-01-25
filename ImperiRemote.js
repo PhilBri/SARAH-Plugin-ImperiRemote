@@ -19,10 +19,12 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 	var http = require('http');
 	var options = {
-    	host: config.IP,
-    	port: config.Port,
+    	host: cfg.IP,
+    	port: cfg.Port,
     	path: '/api/rest/dashboard/gotopage?' + data.cmd
   	};
+
+  	console.log ( options );
 
 	var req = http.get ( options, function ( response ) {
   		var res_data = '';
