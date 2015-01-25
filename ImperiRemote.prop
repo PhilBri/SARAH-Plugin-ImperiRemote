@@ -1,0 +1,10 @@
+{
+	"modules" : {
+		"ImperiRemote"  : {
+			"Description": "SARAH controle Imperihome",
+			"Version" : "0.1",
+			"IP" : "",
+			"Port" : ""
+		}
+	}
+}
