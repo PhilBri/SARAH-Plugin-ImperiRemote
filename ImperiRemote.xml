@@ -6,7 +6,6 @@
 <!--  Fichier XML du Plugin ImperiRemote pour SARAH -->
 
       <item>Sarah
-         <one-of>
             <item>Affiche Imperi Home
                <tag>out.action.cmd="pageIdx=1"; out.action.ttsAction="Imperi Home est affiché"; </tag>
             </item>
