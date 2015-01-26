@@ -1,5 +1,5 @@
 /*_______________________________________________________
-|                 ImperiRemote v0.1                      |
+|                 ImperiRemote v0.3                      |
 |                                                        |
 | Authors : Arnaud Peter & Phil Bri ( 01/2015 )          |
 | Description :                                          |
@@ -17,33 +17,25 @@ exports.action = function ( data , callback , config , SARAH ) {
 		return callback ({ 'tts' : 'Erreur de configuration de l\'I P ou du port' });
 	}
 
-	var http = require( 'http' );
+	var request = require('request');
+
+	// Pour tester la version en POST exécute les 2 actions ci-dessous
+	// Remplace 'GET' par 'POST'
+	// Remplace qs: par form:
+	
 	var options = {
-    	host: cfg.IP,
-    	port: cfg.Port,
-    	path: '/api/rest/dashboard/gotopage?' + data.cmd
-  	};
+    	url: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/dashboard/gotopage',
+    	method: 'GET',
+    	qs: { 'pageIdx' : data.cmd }
+	}
 
-  	//console.log ( options );
-
-	var req = http.get ( options, function ( response ) {
-		console.log('\nSTATUS: ' + res.statusCode);
-		console.log('\nHEADERS: ' + JSON.stringify(res.headers));
-
-
-  		var res_data = '';
-
-  		response.on ( 'data', function ( chunk ) {
-    		res_data += chunk;
-  		});
-
-  		response.on ( 'end', function () {
-  			console.log ( '\nImperiRemote [OK] => Retour : ' + res_data );
-  			//callback ({ 'tts' : data.ttsAction });
-  		});
-	});
-
-	req.on( 'error', function ( e ) {
-		return console.log ( "ImperiRemote => Erreur : " + e.message );
+	request( options, function ( error, response, body ) {
+    	if ( !error && response.statusCode == 200 ) {
+        	console.log( '\nImperiRemote [OK] => Retour = ' + body )
+  			callback ({ 'tts' : data.ttsAction });
+    	} else {
+			console.log ( "\nImperiRemote [Erreur] => Retour = " + error.message );
+			callback ({ 'tts' : 'Erreur dans la requète' });
+    	}
 	});
 }

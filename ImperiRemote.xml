@@ -7,7 +7,7 @@
 
       <item>Sarah
             <item>Affiche Impéri Home
-               <tag>out.action.cmd="pageIdx=1"; out.action.ttsAction="Impéri Home est affiché"; </tag>
+               <tag>out.action.cmd="1"; out.action.ttsAction="Impéri Home est affiché"; </tag>
             </item>
       </item>
       <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/ImperiRemote";</tag>
