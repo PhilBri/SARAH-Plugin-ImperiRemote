@@ -28,7 +28,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 	var req = http.get ( options, function ( response ) {
 		console.log('\nSTATUS: ' + res.statusCode);
-		console.log('\HEADERS: ' + JSON.stringify(res.headers));
+		console.log('\nHEADERS: ' + JSON.stringify(res.headers));
 
 
   		var res_data = '';
