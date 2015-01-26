@@ -19,18 +19,18 @@ exports.action = function ( data , callback , config , SARAH ) {
 	}
 
 	var options = {
-    	url: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/dashboard/gotopage',
-    	method: 'GET',
-    	qs: { 'pageIdx' : data.cmd }
+		url: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/dashboard/gotopage',
+		method: 'GET',
+		qs: { 'pageIdx' : data.cmd }
 	}
 
 	request( options, function ( error, response, body ) {
-    	if ( !error && response.statusCode == 200 ) {
-        	console.log( '\nImperiRemote [OK] => Retour = ' + body )
-  			callback ({ 'tts' : data.ttsAction });
-    	} else {
+		if ( !error && response.statusCode == 200 ) {
+			console.log( '\nImperiRemote [OK] => Retour = ' + body );
+			callback ({ 'tts' : data.ttsAction });
+		} else {
 			console.log ( "\nImperiRemote [Erreur] => Retour = " + error.message );
 			callback ({ 'tts' : 'Erreur dans la requète' });
-    	}
+		}
 	});
 }
