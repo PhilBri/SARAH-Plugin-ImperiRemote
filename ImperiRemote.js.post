@@ -20,8 +20,8 @@ exports.action = function ( data , callback , config , SARAH ) {
 
 	var options = {
     	url: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/dashboard/gotopage',
-    	method: 'GET',
-    	qs: { 'pageIdx' : data.cmd }
+    	method: 'POST',
+    	form: { 'pageIdx' : data.cmd }
 	}
 
 	request( options, function ( error, response, body ) {
