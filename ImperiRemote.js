@@ -17,16 +17,20 @@ exports.action = function ( data , callback , config , SARAH ) {
 		return callback ({ 'tts' : 'Erreur de configuration de l\'I P ou du port' });
 	}
 
-	var http = require('http');
+	var http = require( 'http' );
 	var options = {
     	host: cfg.IP,
     	port: cfg.Port,
     	path: '/api/rest/dashboard/gotopage?' + data.cmd
   	};
 
-  	console.log ( options );
+  	//console.log ( options );
 
 	var req = http.get ( options, function ( response ) {
+		console.log('\nSTATUS: ' + res.statusCode);
+		console.log('\HEADERS: ' + JSON.stringify(res.headers));
+
+
   		var res_data = '';
 
   		response.on ( 'data', function ( chunk ) {
@@ -34,8 +38,8 @@ exports.action = function ( data , callback , config , SARAH ) {
   		});
 
   		response.on ( 'end', function () {
-  			console.log ( '\nImperiRemote [OK] => Commande : ' + data.cmd + ' Retour : ' + res_data );
-  			callback ({ 'tts' : data.ttsAction });
+  			console.log ( '\nImperiRemote [OK] => Retour : ' + res_data );
+  			//callback ({ 'tts' : data.ttsAction });
   		});
 	});
 
