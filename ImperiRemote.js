@@ -27,7 +27,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 	request( options, function ( error, response, body ) {
 		if ( !error && response.statusCode == 200 ) {
 			console.log( '\nImperiRemote [OK] => Retour = ' + body );
-			callback ({ 'tts' : data.ttsAction });
+			callback ({ 'tts' : 'Commande Impéri Home OK' }); // data.ttsAction
 		} else {
 			console.log ( "\nImperiRemote [Erreur] => Retour = " + error.message );
 			callback ({ 'tts' : 'Erreur dans la requète' });
