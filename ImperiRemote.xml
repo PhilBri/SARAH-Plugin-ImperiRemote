@@ -6,9 +6,17 @@
 <!--  Fichier XML du Plugin ImperiRemote pour SARAH -->
 
       <item>Sarah
-            <item>Affiche Impéri Home
-               <tag>out.action.cmd="1"; out.action.ttsAction="Impéri Home est affiché"; </tag>
+         <one-of>
+            <item>Affiche la caméra
+               <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤1"; out.action.ttsAction="La caméra est affiché"; </tag>
             </item>
+            <item>Affiche la température
+               <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤2"; out.action.ttsAction="La température est affichée"; </tag>
+            </item>
+            <item>Affiche la page 3
+               <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤3"; out.action.ttsAction="La page 3 est affichée"; </tag>
+            </item>
+         </one-of>
       </item>
       <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/ImperiRemote";</tag>
    </rule>
