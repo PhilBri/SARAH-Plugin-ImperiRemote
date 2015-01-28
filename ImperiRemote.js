@@ -11,7 +11,7 @@
 exports.action = function ( data , callback , config , SARAH ) {
 
 	var	cfg 	= config.modules.ImperiRemote,
-		Cmd		= data.cmd.split('¤'),
+		Cmd 	= data.cmd.split('¤'),
 		request = require( 'request' ),
 		options = {	
 			uri 	: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/' + Cmd.shift(),
