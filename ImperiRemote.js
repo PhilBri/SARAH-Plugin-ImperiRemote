@@ -16,7 +16,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 		options = {	
 			uri 	: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/' + Cmd.shift(),
 			method 	: 'GET',
-			qs : eval ( require ( 'querystring' ).parse ( Cmd.shift() + '=' + Cmd ))
+			qs 		: eval ( require ( 'querystring' ).parse ( Cmd.shift() + '=' + Cmd ))
 		};
 
 	if ( !cfg.IP || !cfg.Port ) {
