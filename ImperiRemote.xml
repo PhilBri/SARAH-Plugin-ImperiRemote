@@ -7,13 +7,23 @@
 
       <item>Sarah
          <one-of>
-            <item>Affiche la caméra
+            <item>Affiche</item>
+            <item>Mets</item>
+            <item>Montre</item>
+         </one-of>
+         <one-of>
+            <item>Le</item>
+            <item>La</item>
+            <item>Les</item>
+         </one-of>
+         <one-of>
+            <item>Caméra
                <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤1"; out.action.ttsAction="La caméra est affiché"; </tag>
             </item>
-            <item>Affiche la température
+            <item>Température
                <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤2"; out.action.ttsAction="La température est affichée"; </tag>
             </item>
-            <item>Affiche la page 3
+            <item>Consommations électrique
                <tag> out.action.cmd="dashboard/gotopage¤pageIdx¤3"; out.action.ttsAction="La page 3 est affichée"; </tag>
             </item>
          </one-of>

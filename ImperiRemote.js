@@ -11,15 +11,13 @@
 exports.action = function ( data , callback , config , SARAH ) {
 
 	var	cfg 	= config.modules.ImperiRemote,
-		Cmd 	= data.cmd.split('¤'),
+		Cmd 	= data.cmd.split ('¤'),
 		request = require( 'request' ),
 		options = {	
 			uri 	: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/' + Cmd.shift(),
-			method 	: 'GET'
-		},
-		query	= require ( 'querystring' ).parse ( Cmd.shift() + '=' + Cmd );
-
-	options.qs = query;
+			method 	: 'GET',
+			qs : eval ( require ( 'querystring' ).parse ( Cmd.shift() + '=' + Cmd ))
+		};
 
 	if ( !cfg.IP || !cfg.Port ) {
 		console.log ( "\nImperiRemote [Erreur] => IP ou Port non paramétré !" );
