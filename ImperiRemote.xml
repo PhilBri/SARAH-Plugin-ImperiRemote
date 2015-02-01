@@ -5,7 +5,7 @@
 
 <!--  Fichier XML du Plugin ImperiRemote pour SARAH -->
 
-      <item>Sarah
+      <item>Sarah         
          <one-of>
             <item>Affiche</item>
             <item>Mets</item>

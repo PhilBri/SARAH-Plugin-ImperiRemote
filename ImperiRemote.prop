@@ -1,7 +1,7 @@
 {
 	"modules" : {
 		"ImperiRemote"  : {
-			"Description": "SARAH controle Imperihome",
+			"description": "SARAH controle Imperihome",
 			"Version" : "0.4",
 			"IP" : "",
 			"Port" : ""
