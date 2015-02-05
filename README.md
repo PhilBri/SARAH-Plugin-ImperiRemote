@@ -16,18 +16,6 @@ Dans le portlet ImperiRemote, renseignez les champs suivants :
 - Port     = 'Port de ImperiHome'.
 
 
-## ImperiRemote XML modifications
-
-Vous pouvez modifier le fichier XML a votre convenance pour adapter ce plugin à vos besoins.
-
-Les paramètres modifiables sonts :
-- 'dashboard'
-- 'gotopage'
-- 'pageIdx'
-- 'valeur demandée'
-
-
 ## ImperiRemote Example
 
-- "SARAH affiche la caméra".
-- Execution du code http://ip_adress:port/api/rest/dashboard/gotopage?pageIdx=1
+- "SARAH affiche ImperiHome".

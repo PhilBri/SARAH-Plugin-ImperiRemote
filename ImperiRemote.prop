@@ -1,10 +1,15 @@
 {
 	"modules" : {
 		"ImperiRemote"  : {
-			"description": "SARAH controle Imperihome",
-			"Version" : "0.4",
+			"description" : "SARAH controle Imperihome",
+			"version" : "0.5",
 			"IP" : "",
-			"Port" : ""
+			"Port" : "",
+			"pageIdx1" : "Caméra | La caméra est affichée",
+			"pageIdx2" : "",
+			"pageIdx3" : "",
+			"pageIdx4" : "",
+			"pageIdx5" : ""
 		}
 	}
 }

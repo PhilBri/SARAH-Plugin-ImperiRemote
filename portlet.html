@@ -1,0 +1,51 @@
+<h3 class='default'><%= key %> - <%= module.version %></h3>
+<% stylesheet('assets/'+key+'/portlet.css') %>
+
+<%	
+	var plugin = SARAH.ConfigManager.getModule(key);
+	var pages = plugin.pages;
+	var nbpages = 'Ecran disponible :';
+%>
+
+<div class="logo_imperi">
+	<span><img src="/assets/imperiremote/img/logo_imperihome.png"></span>
+	</br>
+</div>
+<div>	
+	<span class="title_page">
+	<% if (pages.length>1) {
+		nbpages = 'Ecrans disponibles :'%>
+		<span><%= pages.length%>&nbsp;Ecrans disponibles :</span>
+	<% } else { %>
+		<span><%= pages.length%>&nbsp;Ecran disponible :</span>
+	<% } %>
+</div>
+<div>
+	<% if (pages[0]!=undefined) {%>
+	<span class="page_imperi">-&nbsp;<%= pages[0]%></span>
+	<% } %>
+	<p><br></p>
+</div>
+<div>
+	<% if (pages[1]!=undefined) {%>
+	<span class="page_imperi">-&nbsp;<%= pages[1]%></span>
+	<% } %>
+	<p><br></p>
+</div>
+<div>
+	<% if (pages[2]!=undefined) {%>
+	<span class="page_imperi">-&nbsp;<%= pages[2]%></span>
+	<% } %>
+	<p><br></p>
+</div>
+<div>
+	<% if (pages[3]!=undefined) {%>
+	<span class="page_imperi">-&nbsp;<%= pages[3]%></span>
+	<% } %>
+	<p><br></p>
+</div>
+<div>
+	<% if (pages[4]!=undefined) {%>
+	<span class="page_imperi">-&nbsp;<%= pages[4]%></span>
+	<% } %>
+</div>

@@ -1,0 +1,41 @@
+
+.plugin-gridster.ImperiRemote .text {
+  /*background: #33A3EC;*/
+  left: 0; width: 100%; 
+  display: block;
+  text-align: center; 
+}
+
+.plugin-gridster.ImperiRemote p {
+  line-height: 6px;
+}
+
+.plugin-gridster.ImperiRemote .title_page {
+  position: absolute;
+  margin: center;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px; 
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.plugin-gridster.ImperiRemote .page_imperi {
+  color: #33A3EC;
+  z-index: 100;
+  /*display: block;*/
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.plugin-gridster.ImperiRemote .logo_imperi {
+  position: absolute;
+  z-index: 0;
+  margin-top: 0px;
+  margin-left: 27px;
+  width: 90px; 
+  opacity:0.2;
+}
