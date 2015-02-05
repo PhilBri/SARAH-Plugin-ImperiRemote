@@ -50,7 +50,7 @@ exports.action = function ( data , callback , config , SARAH ) {
 		options = {	
 			uri 	: 'http://' + cfg.IP + ':' + cfg.Port + '/api/rest/' + data.cmd.split('¤').shift(),
 			method 	: 'GET',
-			qs : eval(require ( 'querystring' ).parse ( (/pageIdx/).exec(Cmd) + '=' + (/\d+/).exec(Cmd) ))
+			qs : eval( require ( 'querystring' ).parse ( /pageIdx/.exec( Cmd ) + '=' + /\d+/.exec( Cmd )))
 		};
 
 	if ( !cfg.IP || !cfg.Port ) {
