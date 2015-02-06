@@ -30,7 +30,6 @@ console.log('\n\n')
         	str += value.split('|').slice(1).shift().trim()+ '|';
 		}
 	}
-        	console.log('str = ' + str);
 	xml	= xml.replace ( /§[^§]+§/gm, "§ -->\n" + cfg_xml + "<!-- §" );
 	fs.writeFileSync ( file, xml, 'utf8' );
 
@@ -54,7 +53,6 @@ exports.action = function ( data , callback , config , SARAH ) {
 			method 	: 'GET',
 			qs : eval( require ( 'querystring' ).parse ( Cmd[1] + '=' + Cmd[2] ))
 		};
-		console.log (options.qs);
 
 	if ( !cfg.IP || !cfg.Port ) {
 		console.log ( "\nImperiRemote [Erreur] => IP ou Port non paramétré !" );
