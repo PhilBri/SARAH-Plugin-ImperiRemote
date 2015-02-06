@@ -4,21 +4,25 @@
 <%	
 	var plugin = SARAH.ConfigManager.getModule(key);
 	var pages = plugin.pages;
-	var nbpages = 'Ecran disponible :';
 %>
 
 <div class="logo_imperi">
 	<span><img src="/assets/imperiremote/img/logo_imperihome.png"></span>
 	</br>
 </div>
-<div>	
+<div>
 	<span class="title_page">
-	<% if (pages.length>1) {
-		nbpages = 'Ecrans disponibles :'%>
-		<span><%= pages.length%>&nbsp;Ecrans disponibles :</span>
-	<% } else { %>
-		<span><%= pages.length%>&nbsp;Ecran disponible :</span>
-	<% } %>
+		<% switch (pages.length) {
+			case 0 : %>
+			<span>Aucun écran paramétré</span>
+			<% break;
+			case 1 : %>
+			<span>1 Ecran disponible :</span>
+			<% break;
+			default : %>
+			<span><%= pages.length%> Ecrans disponibles :</span>
+		<% } %>
+	</span>
 </div>
 <div>
 	<% if (pages[0]!=undefined) {%>

@@ -2,14 +2,19 @@
 	"modules" : {
 		"ImperiRemote"  : {
 			"description" : "SARAH controle Imperihome",
-			"version" : "0.5",
+			"version" : "0.7",
 			"IP" : "",
 			"Port" : "",
-			"pageIdx1" : "Caméra | La caméra est affichée",
-			"pageIdx2" : "",
-			"pageIdx3" : "",
-			"pageIdx4" : "",
-			"pageIdx5" : ""
+			"Ecran 1" : "",
+			"Ecran 2" : "",
+			"Ecran 3" : "",
+			"Ecran 4" : "",
+			"Ecran 5" : "",
+			"Ecran 6" : "",
+			"Ecran 7" : "",
+			"Ecran 8" : "",
+			"Ecran 9" : "",
+			"Ecran 10" : ""
 		}
 	}
 }
