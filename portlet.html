@@ -16,8 +16,13 @@
 			case 0 : %>
 			<span>Aucun écran paramétré</span>
 			<% break;
-			case 1 : %>
+			case 1 : 
+				if (!pages[0]) { %>
+			<span>Aucun écran paramétré</span>
+			<% } else { %>
+
 			<span>1 Ecran disponible :</span>
+			<% } %>
 			<% break;
 			default : %>
 			<span><%= pages.length%> Ecrans disponibles :</span>
@@ -25,25 +30,25 @@
 	</span>
 </div>
 <div>
-	<% if (pages[0]!=undefined) {%>
+	<% if (pages[0]) {%>
 	<span class="page_imperi">-&nbsp;<%= pages[0]%></span>
 	<% } %>
 	<p><br></p>
 </div>
 <div>
-	<% if (pages[1]!=undefined) {%>
+	<% if (pages[1]) {%>
 	<span class="page_imperi">-&nbsp;<%= pages[1]%></span>
 	<% } %>
 	<p><br></p>
 </div>
 <div>
-	<% if (pages[2]!=undefined) {%>
+	<% if (pages[2]) {%>
 	<span class="page_imperi">-&nbsp;<%= pages[2]%></span>
 	<% } %>
 	<p><br></p>
 </div>
 <div>
-	<% if (pages[3]!=undefined) {%>
+	<% if (pages[3]) {%>
 	<span class="page_imperi">-&nbsp;<%= pages[3]%></span>
 	<% } %>
 	<p><br></p>

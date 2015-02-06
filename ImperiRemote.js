@@ -1,5 +1,5 @@
 /*_______________________________________________________
-|                 ImperiRemote v0.5                      |
+|                 ImperiRemote v0.7                      |
 |                                                        |
 | Authors : Arnaud Peter & Phil Bri ( 01/2015 )          |
 | Description :                                          |
@@ -26,7 +26,7 @@ console.log('\n\n')
         		+  tab + '\t\tout.action.cmd="dashboard/gotopage/api/rest/¤pageIdx¤' + value.split('|').shift().trim() + '";'
         		+  tab + '\t\tout.action.ttsAction="' + value.split('|').pop().trim() + '";'
         		+  tab + '\t</tag>'
-        		+  tab + '</item>';
+        		+  tab + '</item>\r';
         	str += value.split('|').slice(1).shift().trim()+ '|';
 		}
 	}
