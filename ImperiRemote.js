@@ -9,24 +9,24 @@
 */
 
 function write_XML_Pages ( config, cb ) {
-    var fs		= require ( 'fs' ),
-    	file	= __dirname + "\\ImperiRemote.xml",
-    	xml		= fs.readFileSync ( file, 'utf8' ),
+    var fs 		= require ( 'fs' ),
+    	file 	= __dirname + "\\ImperiRemote.xml",
+    	xml 	= fs.readFileSync ( file, 'utf8' ),
     	cfg_xml	= '',
-    	str		= '',
-    	tab		= '\r\t\t\t\t';
+    	str 	= '',
+    	tab 	= '\r\t\t\t\t';
 	for ( var key in config )
 	{
 		var value = config[key];
 		if ( /Ecran/.exec(key) && value ) {
         	cfg_xml
 				+= tab + '<item>' + value.split('|').slice(1).shift().toString().trim()
-        		+  tab + '\t<tag>'
-        		+  tab + '\t\tout.action.cmd="dashboard/gotopage/api/rest/¤pageIdx¤' + value.split('|').shift().trim() + '";'
-        		+  tab + '\t\tout.action.ttsAction="' + value.split('|').pop().trim() + '";'
-        		+  tab + '\t</tag>'
-        		+  tab + '</item>\r';
-        	str += value.split('|').slice(1).shift().trim()+ '|';
+				+  tab + '\t<tag>'
+				+  tab + '\t\tout.action.cmd="dashboard/gotopage/api/rest/¤pageIdx¤' + value.split('|').shift().trim() + '";'
+				+  tab + '\t\tout.action.ttsAction="' + value.split('|').pop().trim() + '";'
+				+  tab + '\t</tag>'
+				+  tab + '</item>\r';
+			str += value.split('|').slice(1).shift().trim()+ '|';
 		}
 	}
 	xml	= xml.replace ( /§[^§]+§/gm, "§ -->\n" + cfg_xml + "<!-- §" );
