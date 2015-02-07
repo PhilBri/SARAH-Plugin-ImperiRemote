@@ -29,7 +29,7 @@ function write_XML_Pages ( config, cb ) {
 			str += value.split('|').slice(1).shift().trim()+ '|';
 		}
 	}
-	xml	= xml.replace ( /§[^§]+§/gm, "§ -->\n" + cfg_xml + "<!-- §" );
+	xml = xml.replace ( /§[^§]+§/gm, "§ -->\n" + cfg_xml + "<!-- §" );
 	fs.writeFileSync ( file, xml, 'utf8' );
 	if ( cb ) cb ( str.slice( 0, str.length -1 ) );
 }
