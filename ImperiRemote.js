@@ -15,7 +15,6 @@ function write_XML_Pages ( config, cb ) {
     	cfg_xml	= '',
     	str		= '',
     	tab		= '\r\t\t\t\t';
-console.log('\n\n')
 	for ( var key in config )
 	{
 		var value = config[key];
@@ -32,7 +31,6 @@ console.log('\n\n')
 	}
 	xml	= xml.replace ( /§[^§]+§/gm, "§ -->\n" + cfg_xml + "<!-- §" );
 	fs.writeFileSync ( file, xml, 'utf8' );
-
 	if ( cb ) cb ( str.slice( 0, str.length -1 ) );
 }
 
